@@ -3,6 +3,7 @@
 
 
 
+
 body{
     background: linear-gradient(purple, #7a4581, pink);
     color: #fffc;
@@ -35,6 +36,31 @@ body{
                 transform: scale(1);
             }
         }
+    }
+    &.css {
+        background: linear-gradient(45deg, black, #663399);
+        background-attachment: fixed;
+    main {
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        menu.mainmenu{
+            a:link, a:visited {
+                span {
+                    background-color: #663399;
+                    height: 50px;
+                    width: 50px;
+                }
+
+                aside{
+                    h4 {
+                        font-size: 1.2rem;
+                    } 
+                }
+            }
+        }
+    }
     }
     &.emmet {
             background: linear-gradient(45deg, black, #7acb16);
