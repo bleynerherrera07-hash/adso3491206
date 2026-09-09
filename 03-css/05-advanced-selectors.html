@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-template</title>
+    <title>05-advanced-selectors</title>
     <link rel="stylesheet" href="../src/css/Styles.css">
+    <style>
+        ul.fruits > li[class] {
+            background-color: #ff06;
+            padding: 0.2rem;
+        }
+    </style>
 </head>
-<body class="html">
+<body class="class">
     <nav class="back">
         <a href="../index.html">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"></path></svg>
@@ -14,12 +20,24 @@
     </nav>
     <main>
             <header class="mainmenu submenu">
-            <h1>00-template </h1>
+            <h1>05-advanced-selectors </h1>
             <img src="../src/img/logo-css.png" alt="Css">
-            <h3>Description</h3>
+             <ul>   
+                    <li>Children (>) </li>
+                    <li>Adjacent/Sibling (+) </li>
+                    <li>Attribute [class </li>
+                    
+            </ul>
             </header>
             <section>
-                <h2 class="subtitle"></h2>
+                <h2 class="subtitle">Example:</h2>
+                <ul class="fruits">
+                    <li>🍊 Orange</li>
+                    <li>🍎 Apple</li>
+                    <li class="highlight">🍋 Lemon</li>
+                    <li>🍓 Strawberry</li>
+                    <li>🍇 Grapes</li>
+                </ul>
             </section>
     </main>
 </body>
