@@ -3,141 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge Sprite</title>
+    <title>Sprite Challenge Layout</title>
     <style>
-        /* --- Tema 01 y 06: Reset --- */
+       
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; 
         }
 
-        /* --- Tema 13, 14 y 08: Box Model, Background y Unidades --- */
         body {
-            border: 10px solid #fff; 
-            background-color: #17a053; 
-            min-height: 100vh;
-            font-family: Arial, sans-serif; /* Tema 18: Tipografía */
-            color: #fff;
+            border: 10px solid #ffffff;
+            background-color: #17a053;
+            min-height: 100dvh;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
         }
 
-        /* Contenedor principal */
-        main {
-            width: 90%;
-            max-width: 1000px;
-            margin: 0 auto; /* Centrar horizontalmente */
-            padding-top: 2rem;
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /* --- Tema 14: Background (Tu código original) --- */
-        header figure.logo {
+        .top-section {
+            text-align: center;
+        }
+
+        .brand-logo {
             background: url(imgs/spriteweb.png) no-repeat;
-            background-position: -25px -420px;
+            background-position: -25px -420px; 
             height: 160px;
             margin: 2rem auto;
             width: 160px;
         }
 
-        /* --- Tema 21: Listas y Tema 17: Visualización --- */
-        nav {
-            text-align: center; /* Centra los elementos en línea */
-            margin-bottom: 40px;
+        .main-nav {
+            margin-bottom: 3rem;
         }
 
-        nav ul {
-            list-style: none; /* Quita los puntos de la lista */
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            width: 750px;
+            margin: 0 auto;
+            overflow: hidden;
         }
 
-        nav li {
-            display: inline-block; /* Pone los elementos en fila (técnica clásica) */
-            margin: 0 10px; /* Separación entre botones */
+        .main-nav ul li {
+            float: left;
+            margin: 0 7px;
         }
 
-        nav a {
+        .main-nav a {
             text-decoration: none;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.6); /* Tema 12: Colores Alpha */
-            padding: 15px 30px; /* Tema 13: Box Model */
+            color: #ffffff;
+            background-color: #0d5c22;
+            padding: 12px 25px;
+            display: block;
+            border-bottom: 3px solid #ffffff;
             font-weight: bold;
             font-size: 14px;
-            border-bottom: 4px solid #fff; /* Línea blanca inferior */
-            display: block; /* Hace que todo el bloque sea clickeable */
         }
 
-        /* --- Tema 20: Pseudoclases --- */
-        nav a:hover {
-            background-color: #000;
+        .main-nav a:hover {
+            background-color: #083d16;
         }
 
-        /* Estilo para el botón activo (Portfolio) */
-        nav a.active {
-            background-color: #000;
-            border-bottom: 4px solid #f1c40f; /* Línea amarilla */
+        .gallery {
+            overflow: hidden;
+            margin-bottom: 3rem;
         }
 
-        /* --- Tema 15 y 16: Position y Float (Contenedor de Tarjetas) --- */
-        section.cards-container {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 30px;
-            /* Solución clásica para que el contenedor abrace a los hijos flotantes */
-            overflow: hidden; 
-        }
-
-        /* --- Tema 13 y 16: Box Model y Float (Tarjetas) --- */
-        .card {
-            background-color: #ccc;
-            width: 31%; /* Ancho para que quepan 3 con espacio */
-            float: left; /* Técnica clásica para alinear horizontalmente */
-            margin-right: 3.5%; /* Espacio a la derecha */
-            border: 3px solid #fff;
+        .item {
+            background-color: #17a053;
+            border: 2px solid white;
+            padding: 15px;
+            width: 28%;
             text-align: center;
-            color: #000;
+            float: left;
+            margin: 0 1%;
         }
 
-        /* Quitamos el margen a la última tarjeta para que encaje perfecto */
-        .card:last-child {
-            margin-right: 0;
+        .item h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: black;
+            background-color: rgba(68, 67, 67, 0.4); 
+            padding: 8px 0;
+            margin-left: -15px; 
+            margin-right: -15px; 
         }
 
-        .card h3 {
-            padding: 10px;
-            font-size: 16px;
-            background-color: rgba(255, 255, 255, 0.8);
+        .thumb {
+            width: 200px; 
+            height: 200px; 
+            margin: 0 auto; 
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
         }
 
-        .card-image {
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-            background-color: #4CAF50; /* Color de respaldo */
+        .thumb-a { background-position: -575px -7px; }
+        .thumb-b { background-position: -575px -7px; }
+        .thumb-c { background-position: -575px -7px; }
+
+        .content-block {
+            background-color: #f0f0f0;
+            color: #333333;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto 30px auto; 
+            overflow: hidden;
+        }
+
+        .block-icon {
+            float: left;
+            width: 80px; 
+            height: 80px;
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -300px -502px; 
+            margin-right: 20px;
+        }
+
+        .block-text {
+            float: left;
+            width: 70%;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .block-img {
+            float: right;
+            width: 100px; 
+            height: 180px;
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -84px -210px; 
+        }
+
+        .page-footer {
+            background-color: #f0f0f0; 
+            max-width: 1000px; 
+            margin: 0 auto 50px auto; 
+            padding: 40px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .footer-logo {
+            width: 250px; 
+            height: 150px; 
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -496px -443px; 
+            margin: 0 auto 40px auto;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            width: 750px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .footer-nav ul li {
+            float: left;
+            margin: 0 20px;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #333333; 
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer-nav a:hover {
+            color: #17a053; 
         }
     </style>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="top-section">
+            <div class="brand-logo"></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
 
-    <main>
-        <header>
-            <figure class="logo"></figure>
-        </header>
-
-        <!-- Barra de navegación -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">NOSOTROS</a></li>
-                <li><a href="#" class="active">PORTFOLIO</a></li>
-                <li><a href="#">SERVICIOS</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
-
-        <!-- Sección de Tarjetas -->
-        <section class="cards-container">
-            
-            <div class="card">
+        <section class="gallery">
+            <div class="item">
                 <h3>Sprite 01</h3>
-                <div class="card-image" style="background-image: url('i');"></div>
+                <div class="thumb thumb-a"></div>
             </div>
+            <div class="item">
+                <h3>Sprite 02</h3>
+                <div class="thumb thumb-b"></div>
+            </div>
+            <div class="item">
+                <h3>Sprite 03</h3>
+                <div class="thumb thumb-c"></div>
+            </div>
+        </section>
+        
+        <section class="content-block">
+            <div class="block-icon"></div>
+            <div class="block-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+                </p>
+            </div>
+            <div class="block-img"></div>
+        </section>
 
-            <div class="card">
-                <h
+        <section class="content-block">
+            <div class="block-icon"></div>
+            <div class="block-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+                </p>
+            </div>
+            <div class="block-img"></div>
+        </section>
+
+        <section class="content-block">
+            <div class="block-icon"></div>
+            <div class="block-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+                </p>
+            </div>
+            <div class="block-img"></div>
+        </section>
+        <footer class="page-footer">
+            
+            <div class="footer-logo"></div>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    </div>
+</body>
+</html>
