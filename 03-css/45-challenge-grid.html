@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45-challenge grid</title>
+    <link rel="stylesheet" href="../src/css/Styles.css">
+    <style>
+        section .gallery {
+            display: grid;
+            grid-gap: 8px;
+            margin-bottom: 3rem;
+        }
+        section .gallery div {
+            border: 2px solid #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1a0b2e;
+        }
+        section .gallery div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Example 01 - IGUAL A LA FOTO */
+        .example01 {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 140px 140px 140px;
+            grid-template-areas:
+                "a1 a2 a3"
+                "a4 a2 a5"
+                "a6 a6 a7";
+        }
+        .a1 { grid-area: a1; }
+        .a2 { grid-area: a2; }
+        .a3 { grid-area: a3; }
+        .a4 { grid-area: a4; }
+        .a5 { grid-area: a5; }
+        .a6 { grid-area: a6; }
+        .a7 { grid-area: a7; }
+
+        /* Example 02 - IGUAL A LA FOTO */
+        .example02 {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 140px 140px 140px;
+            grid-template-areas:
+                "b1 b1 b2 b3"
+                "b1 b1 b4 b4"
+                "b5 b6 b4 b4";
+        }
+        .b1 { grid-area: b1; }
+        .b2 { grid-area: b2; }
+        .b3 { grid-area: b3; }
+        .b4 { grid-area: b4; }
+        .b5 { grid-area: b5; }
+        .b6 { grid-area: b6; }
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+            <header class="mainmenu submenu">
+            <h1>45-challenge grid</h1>
+            <img src="../src/img/logo-css.png" alt="Css">
+            <h3>Irregular Gallery: Grind Areas</h3>
+            </header>
+            <section>
+                <h2 class="subtitle">Example 01:</h2>
+                <div class="gallery example01">
+                    <div class="a1"><img src="imgs/inoske.jpg"></div>
+                    <div class="a2"><img src="imgs/nezuko.jpg"></div>
+                    <div class="a3"><img src="imgs/tomioka.jpg"></div>
+                    <div class="a4"><img src="imgs/tanjiro.jpg"></div>
+                    <div class="a5"><img src="imgs/inosuke.png"></div>
+                    <div class="a6"><img src="imgs/rengoku.jpg"></div>
+                    <div class="a7"><img src="imgs/demonio.jpeg"></div>
+                </div>
+
+                <h2 class="subtitle">Example 02:</h2>
+                <div class="gallery example02">
+                    <div class="b1"><img src="imgs/onepiece2.jpeg"></div>
+                    <div class="b2"><img src="imgs/one piece1.jpeg"></div>
+                    <div class="b3"><img src="imgs/onepiece3.jpeg"></div>
+                    <div class="b4"><img src="imgs/onepiece4.jpeg"></div>
+                    <div class="b5"><img src="imgs/onepiece5.jpeg"></div>
+                    <div class="b6"><img src="imgs/onepiece6.jpeg"></div>
+                </div>
+            </section>
+    </main>
+</body>
+</html>
+                    
